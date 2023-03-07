@@ -1,4 +1,5 @@
-FROM adoptopenjdk/openjdk8:alpine
+# FROM adoptopenjdk/openjdk8:alpine
+FROM openjdk:8-jdk-buster
 
 ENV vb_version=11.3.0
 ENV st_version=11.3
