@@ -3,7 +3,8 @@ FROM adoptopenjdk/openjdk8:alpine
 ENV showvoc_version=2.3.0
 ENV st_version=11.3
 
-COPY showvoc-${showvoc_version}-full.zip /tmp
+RUN curl -L https://bitbucket.org/art-uniroma2/showvoc/downloads/showvoc-${showvoc_version}-full.zip --output /tmp/showvoc-${showvoc_version}-full.zip
+
 RUN set -eux ; \
 	mkdir /opt/showvoc ; \
 	mkdir /opt/showvoc/data ; \
